@@ -13,7 +13,7 @@ chances = 3  # número de chances para errar a letra
 while True:
     # Verifica o valor de chances restantes. Se zerar, o jogo termina.
     if chances <= 0:
-        print(f'Que pena, você perdeu o jogo :(\nA palavra secreta era {palavra}')
+        print(f'Que pena, você perdeu o jogo :(\nA palavra secreta era "{palavra}".')
         break
     # Pede ao usuário para digitar uma letra qualquer
     letra = input('Digite uma letra: ')
@@ -47,8 +47,8 @@ while True:
 
     # se a palavra acertada temporariamente corresponder à palavra secreta:
     if temp == palavra:
-        print(f'Parabéns! Você ganhou o jogo :)\nA palavra secreta era "{palavra}".')  # emite o aviso de término
+        print(f'-----\nParabéns! Você ganhou o jogo :)\nA palavra secreta era "{palavra}".')  # emite o aviso de término
         break
 
     # emite como está a situação atual da palavra e as chances restantes
-    print(f'Palavra secreta: {temp}\nChances restantes: {chances}')
+    print(f'Palavra secreta: {temp}\nChances restantes: {chances}\n-----')
