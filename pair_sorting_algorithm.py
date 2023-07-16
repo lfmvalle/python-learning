@@ -19,17 +19,18 @@ def pair_sorting(l, crescent=True) -> list:
     ran_l = range(len_l)
 
     while True:
-        last_l = l.copy()
-        for i in ran_l:
-            if i < len_l - 1:
-                if crescent and l[i] > l[i + 1]:
-                    l[i], l[i + 1] = l[i + 1], l[i]
-                    continue
-                elif not crescent and l[i] < l[i + 1]:
-                    l[i], l[i + 1] = l[i + 1], l[i]
-                    continue
         if last_l == l:
             return l
+        else:
+            last_l = l.copy()
+            for i in ran_l:
+                if i < len_l - 1:
+                    if crescent and l[i] > l[i + 1]:
+                        l[i], l[i + 1] = l[i + 1], l[i]
+                        continue
+                    elif not crescent and l[i] < l[i + 1]:
+                        l[i], l[i + 1] = l[i + 1], l[i]
+                        continue
 
 
 # Testando o algoritmo:
