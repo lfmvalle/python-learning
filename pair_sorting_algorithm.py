@@ -15,10 +15,13 @@ def pair_sorting(l, crescent=True) -> list:
     :rtype: list
     """
 
+    len_l = len(l)
+    ran_l = range(len_l)
+
     while True:
         last_l = l.copy()
-        for i, a in enumerate(l):
-            if i < len(l) - 1:
+        for i in ran_l:
+            if i < len_l - 1:
                 if crescent and l[i] > l[i + 1]:
                     l[i], l[i + 1] = l[i + 1], l[i]
                     continue
