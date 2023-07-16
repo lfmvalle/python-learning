@@ -17,7 +17,8 @@ def pair_sorting(l, crescent=True) -> list:
 
     len_l = len(l)
     ran_l = range(len_l)
-
+    last_l = []
+    
     while True:
         if last_l == l:
             return l
